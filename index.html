@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Drive</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+     
+      <style>
+          
+          .nav{
+    background-color: #FFFFFF;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.image{
+    position: relative;
+    right: 720px;
+
+}
+.box {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  left: -150px;
+  float: right;
+  width: 70%;
+  text-align: center;
+  flex: 1;
+}
+
+.img1 {
+  display: block;
+  
+  max-width:130px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+}
+.nav1,img,h1{
+     display: flex;  
+     flex-direction: row; 
+     align-items: center; 
+     margin-left: 10px;
+     max-width: 30vw;
+    
+    
+}
+
+hr{
+    top: 0px;
+    
+}
+.nav2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15vw;
+
+
+}
+.search{
+    display: flex;
+    align-items: center;
+    border: 1px solid wheat;
+    padding: 10px 20px;
+    border-radius: 9px;
+    width: 45vw;
+    
+}
+.search input{
+    flex: 1;
+    border: none;
+}
+.nav3{
+    margin-left: 30px;
+    gap: 30px;
+
+}
+.nav4{
+    margin-left: 28px;
+}
+.section1{
+    
+    background-color: white;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+
+}
+.section2{
+    min-width: 28vw;
+    position: sticky;
+    top: 40px;
+}
+.btn1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 999px;
+}
+.btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    border-radius: 9px;
+    
+    background-color: #FFFFFF;
+    border: none;
+
+
+}
+.section4{position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.section5{
+    margin-left: 50vw;
+}
+.container{
+    width: auto;
+}
+
+      </style>
+
+</head>
+<body>
+    <div class="nav">
+        <div class="nav1"><img src="data:image/png;base64,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" alt="" height="30px" width="33px">
+        <h1>Drive</h1></div>
+       
+        <div class="nav2"> 
+            <div class="search">
+            <span class="material-icons">
+                search
+                </span>
+                <input type="text">
+                <span class="material-icons">
+                    tune
+                    </span>
+                
+            </div>
+            <div class="nav3">
+            <span class="material-icons">
+                help_outline
+                </span>
+                <span class="material-icons">
+                    settings_applications
+                    </span>
+                </div>
+                <div class="nav4">
+                    <span class="material-icons">
+                        apps_outage
+                        </span>
+                        <span class="material-icons">
+                            cloud_circle
+                            </span>
+                </div>
+        </div>
+    </div>
+    <hr>
+    <div class="section1">
+        <div class="section2">
+            <button class="btn1">
+                <span class="material-icons">
+                    add 
+                    </span>
+                    New
+            </button>
+            <button class="btn2">
+                <span class="material-icons">
+                    devices
+                    </span>
+                    My Computer
+            </button>
+            <button class="btn2">
+                <span class="material-icons">
+                    save
+                    </span>
+                    My Drive
+            </button>
+           
+            <button class="btn2">
+                <span class="material-icons">
+                    group
+                    </span>
+                    Shared With ME
+            </button>
+            <button class="btn2"><span class="material-icons">
+                schedule
+                </span>
+                Recent
+            </button>
+                
+                <button class="btn2">
+                    <span class="material-icons">
+                        restore_from_trash
+                        </span>
+                        Trash
+                </button>
+                <button class="btn2">
+                    <span class="material-icons">
+                        star_outline
+                        </span> 
+                        Starred
+                </button>
+                <hr>
+                <button class="btn2">
+                    <span class="material-icons">
+                        cloud_queue
+                        </span>
+                        Storage
+                </button>
+                <input type="range"><br>
+                <button>Buy Storage</button>
+                
+
+        </div>
+        <div class="section3">
+            <div class="section4" >
+            <h3>My DRIVE</h3>
+           <div class="section5">
+            <button id="p1" ><span class="material-icons">
+                view_list
+                </span>
+            </button>
+            
+            <button ><span class="material-icons">
+                priority_high
+                </span>
+            </button>
+        </div>
+            </div>
+            <hr>
+            <div class="container">
+            
+        
+            <div class="box" id="p2">
+                <table border="2">
+                    <tr>
+               
+                        <th><img class="img1" src="https://image.shutterstock.com/image-photo/environment-earth-day-hands-trees-260nw-1216091761.jpg"></th>
+                
+                    </tr>
+                    <tr>
+                        <th><img class="img1" src="https://i.pinimg.com/originals/a7/3d/6e/a73d6e4ac85c6a822841e449b24c78e1.jpg"></th>
+                        
+                    </tr>
+                   
+                </table>
+                <table border="2">
+                    <tr>
+                        
+                        <th><img class="img1"src="https://github.com/skmahaboobjani/flex/blob/main/download%20(3).jpg?raw=true"></th> 
+                    </tr>
+                </table>
+                <table border="2">
+                    <tr>
+                        <th><img class="img1"src="https://github.com/skmahaboobjani/flex/blob/main/download%20(1).jpg?raw=true"></th>
+                    </tr>
+                </table>
+                    <table border="2">
+                        <tr>
+                            <th><img class="img1"src="https://github.com/skmahaboobjani/flex/blob/main/download.jpg?raw=true"></th>
+                        
+                </tr>
+                    </table>
+                    <table border="2">
+                        <tr>
+                <th><img class="img1"src="https://github.com/skmahaboobjani/flex/blob/main/images.jpg?raw=true"></th>
+                        </tr>
+                    </table>
+                    <br>  
+                   
+                    
+           
+            </div>
+            </div>
+        
+            
+        
+        
+        
+                                         
+        
+         <script src="mabu.js" >
+            
+         </script>
+        </div>
+        
+
+    </div>
+    
+    
+
+</body>
+</html>
